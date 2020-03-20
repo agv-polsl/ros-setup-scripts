@@ -1,5 +1,6 @@
 function install_rosdeps
 {
+	sudo apt update
 	sudo apt --no-install-recommends -y install `cat pkglist-rosdeps`
 }
 

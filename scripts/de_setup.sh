@@ -1,6 +1,6 @@
 function install_de
 {
-	sudo add-apt-repository `cat replist-de` 
+	sudo add-apt-repository -y `cat replist-de` 
 	sudo apt --no-install-recommends -y install `cat pkglist-de`
 }
 

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 . ./scripts/common.sh
 . ./scripts/ros_setup.sh
@@ -52,3 +52,6 @@ fi
 echo -e "${GREEN}Userspace setup done${NOCOLOR}"
 
 echo -e "${BLUE}Setup finished${NOCOLOR}"
+
+read -p "Do you wish to reboot now? [Y/n]" -n 1 -s ans && echo
+[ "${ans}" != "n" ] && reboot
