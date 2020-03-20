@@ -1,5 +1,5 @@
-. ./common.sh
-. ./ros_setup.sh
+. .scripts/common.sh
+. .scripts/ros_setup.sh
 
 set_colors
 
@@ -29,7 +29,7 @@ echo -e "${GREEN}Gazebo installation done${NOCOLOR}"
 read -p "Do you wish to install desktop enviroment (xfce4) [Y/n]" -n 1 -s ans \
 && echo
 if [ "${ans}" != "n" ]; then
-	. ./de_setup.sh
+	. .scripts/de_setup.sh
 	install_de
 	[ $? -eq 0 ] || error "Failed to install xfce dependencies, aborting..."
 	config_xfce_theming
@@ -39,7 +39,7 @@ fi
 
 read -p "Do you wish to optimize userspace for ROS [Y/n]" -n 1 -s ans && echo
 if [ "${ans}" != "n" ]; then
-	. ./user-setup
+	. .scripts/user-setup
 	setup_user
 fi
 echo -e "${GREEN}Userspace setup done${NOCOLOR}"
