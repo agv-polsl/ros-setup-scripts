@@ -25,6 +25,7 @@ install_ros
 echo -e "${GREEN}ROS installation done${NOCOLOR}"
 
 echo -e "${BLUE}Installing pip modules${NOCOLOR}"
+python3 -m pip install wheel
 python3 -m pip install -r requirements.txt
 [ $? -eq 0 ] || echo "${RED}Failed install pip modules, continuing...${NOCLOR}"
 echo -e "${GREEN}Pip modules installaion done${NOCOLOR}"
