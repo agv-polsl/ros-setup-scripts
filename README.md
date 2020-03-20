@@ -16,14 +16,18 @@ Includes Gazebo installation.
 
 ## Setup test
 
-1. `gazebo --verbose /opt/ros/dashing/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world`
-2. `ros2 topic pub /demo/cmd_demo geometry_msgs/Twist '{linear: {x: 1.0}}' -1`
+After typing following commands you should see a simple robot moving.
+
+1. `gazebo --verbose /opt/ros/dashing/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world`.
+2. `ros2 topic pub /demo/cmd_demo geometry_msgs/Twist '{linear: {x: 1.0}}' -1`.
 
 ## Files in repo
 
-* `pkglist-de` - desktop environment related packages
-* `pkglist-gazebo`- gazebo related packages
-* `pkglist-ros` - ROS related packages
-* `pkglist-rosdeps` - ROS dependencies and ros projects related packages
-* `replist-de` - additional repos related to desktop environment
-* `requirements.txt`- pip modules
+When extending the setup please put packages in according files:
+
+* `pkglist-de` - desktop environment related packages.
+* `pkglist-gazebo`- gazebo related packages.
+* `pkglist-ros` - ROS related packages.
+* `pkglist-rosdeps` - ROS dependencies and ros projects related packages.
+* `replist-de` - additional repos related to desktop environment.
+* `requirements.txt`- pip modules.
