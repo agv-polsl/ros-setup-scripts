@@ -47,7 +47,7 @@ fi
 
 read -p "Do you wish to optimize userspace for ROS [Y/n]" -n 1 -s ans && echo
 if [ "${ans}" != "n" ]; then
-	. ./scripts/user-setup
+	. ./scripts/user_setup.sh
 	setup_user
 fi
 echo -e "${GREEN}Userspace setup done${NOCOLOR}"
