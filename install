@@ -1,0 +1,47 @@
+. ./common.sh
+. ./ros_setup.sh
+
+set_colors
+
+echo -e "${BLUE}This is ROS setup sript${NOCOLOR}"
+read -p "Do you wish to start the installtion? [Y/n]" -n 1 -s ans && echo
+[ "${ans}" != "n" ] || exit 0
+
+echo -e "${BLUE}Installing system updates${NOCOLOR}"
+sudo apt update && sudo apt upgrade
+[ $? -eq 0 ] || error "Failed to update apt-get, aborting..."
+echo -e "${GREEN}System update done${NOCOLOR}"
+
+echo -e "${BLUE}Installing ROS dependencies${NOCOLOR}"
+install_rosdeps
+[ $? -eq 0 ] || error "Failed to install ROS dependencies, aborting..."
+echo -e "${GREEN}ROS dependencies installation done${NOCOLOR}"
+
+echo -e "${BLUE}Installing ROS${NOCOLOR}"
+install_ros
+[ $? -eq 0 ] || error "Failed to install ROS, aborting..."
+echo -e "${GREEN}ROS installation done${NOCOLOR}"
+
+read -p "Do you wish to install simulator (Gazebo) [Y/n]" -n 1 -s ans && echo
+[ "${ans}" != "n" ] && install_gazebo
+echo -e "${GREEN}Gazebo installation done${NOCOLOR}"
+
+read -p "Do you wish to install desktop enviroment (xfce4) [Y/n]" -n 1 -s ans \
+&& echo
+if [ "${ans}" != "n" ]; then
+	. ./de_setup.sh
+	install_de
+	[ $? -eq 0 ] || error "Failed to install xfce dependencies, aborting..."
+	config_xfce_theming
+	[ $? -eq 0 ] || echo "${RED}Failed to theme xfce, continuing...${NOCLOR}"
+	echo -e "${GREEN}Desktop enviroment installation done${NOCOLOR}"
+fi
+
+read -p "Do you wish to optimize userspace for ROS [Y/n]" -n 1 -s ans && echo
+if [ "${ans}" != "n" ]; then
+	. ./user-setup
+	setup_user
+fi
+echo -e "${GREEN}Userspace setup done${NOCOLOR}"
+
+echo -e "${BLUE}Setup finished${NOCOLOR}"
