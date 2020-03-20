@@ -1,5 +1,7 @@
-. .scripts/common.sh
-. .scripts/ros_setup.sh
+#!/bin/sh
+
+. ./scripts/common.sh
+. ./scripts/ros_setup.sh
 
 set_colors
 
@@ -8,7 +10,7 @@ read -p "Do you wish to start the installtion? [Y/n]" -n 1 -s ans && echo
 [ "${ans}" != "n" ] || exit 0
 
 echo -e "${BLUE}Installing system updates${NOCOLOR}"
-sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade -y
 [ $? -eq 0 ] || error "Failed to update apt-get, aborting..."
 echo -e "${GREEN}System update done${NOCOLOR}"
 
@@ -29,7 +31,7 @@ echo -e "${GREEN}Gazebo installation done${NOCOLOR}"
 read -p "Do you wish to install desktop enviroment (xfce4) [Y/n]" -n 1 -s ans \
 && echo
 if [ "${ans}" != "n" ]; then
-	. .scripts/de_setup.sh
+	. ./scripts/de_setup.sh
 	install_de
 	[ $? -eq 0 ] || error "Failed to install xfce dependencies, aborting..."
 	config_xfce_theming
@@ -39,7 +41,7 @@ fi
 
 read -p "Do you wish to optimize userspace for ROS [Y/n]" -n 1 -s ans && echo
 if [ "${ans}" != "n" ]; then
-	. .scripts/user-setup
+	. ./scripts/user-setup
 	setup_user
 fi
 echo -e "${GREEN}Userspace setup done${NOCOLOR}"
