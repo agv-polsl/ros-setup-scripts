@@ -34,7 +34,7 @@ read -p "Do you wish to install simulator (Gazebo) [Y/n]" -n 1 -s ans && echo
 [ "${ans}" != "n" ] && install_gazebo
 echo -e "${GREEN}Gazebo installation done${NOCOLOR}"
 
-read -p "Do you wish to install desktop enviroment (xfce4) [Y/n]" -n 1 -s ans \
+read -p "Do you wish to install desktop environment (xfce4) [Y/n]" -n 1 -s ans \
 && echo
 if [ "${ans}" != "n" ]; then
 	. ./scripts/de_setup.sh
@@ -42,7 +42,7 @@ if [ "${ans}" != "n" ]; then
 	[ $? -eq 0 ] || error "Failed to install xfce dependencies, aborting..."
 	config_xfce_theming
 	[ $? -eq 0 ] || echo "${RED}Failed to theme xfce, continuing...${NOCLOR}"
-	echo -e "${GREEN}Desktop enviroment installation done${NOCOLOR}"
+	echo -e "${GREEN}Desktop environment installation done${NOCOLOR}"
 fi
 
 read -p "Do you wish to optimize userspace for ROS [Y/n]" -n 1 -s ans && echo
