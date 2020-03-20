@@ -8,5 +8,5 @@ function set_colors
 
 function error
 {
-	echo "${RED}$1${NOCOLOR}"; exit 1;
+	echo -e "${RED}$1${NOCOLOR}"; exit 1;
 }
