@@ -12,6 +12,7 @@ function install_ros
 	sudo sh -c 'echo "deb http://packages.ros.org/ros2/ubuntu \
 		`lsb_release -cs` main" > /etc/apt/sources.list.d/ros2-latest.list'
 	
+	sudo apt update
 	sudo apt -y install --no-install-recommends `cat pkglist-ros`
 }
 
