@@ -13,6 +13,7 @@ Includes Gazebo installation.
 5. Setup permissions `chmod +x ./install`.
 6. Run installation `./install`.
 7. To enter desktop environment start X server `startx`.
+8. Setting up xfce theming may require re-running the script after entering gui.
 
 ## Setup test
 
