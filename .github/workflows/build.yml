@@ -17,4 +17,4 @@ jobs:
     - name: configure
       run: chmod +x ./install
     - name: install
-      run: ./install
+      run: yes | ./install
