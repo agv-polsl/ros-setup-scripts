@@ -9,6 +9,8 @@ echo -e "${BLUE}This is ROS setup sript${NOCOLOR}"
 read -p "Do you wish to start the installtion? [Y/n]" -n 1 -s ans && echo
 [ "${ans}" != "n" ] || exit 0
 
+dsjkjkjl
+
 echo -e "${BLUE}Installing system updates${NOCOLOR}"
 sudo apt update && sudo apt upgrade -y
 [ $? -eq 0 ] || error "Failed to update apt-get, aborting..."
