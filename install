@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 . ./scripts/common.sh
 . ./scripts/ros_setup.sh
 
