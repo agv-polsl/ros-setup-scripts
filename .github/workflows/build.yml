@@ -1,4 +1,3 @@
-
 name: Build
 
 on:
@@ -17,4 +16,4 @@ jobs:
     - name: configure
       run: chmod +x ./install
     - name: install
-      run: yes | ./install
+      run: echo yyyyn | ./install
