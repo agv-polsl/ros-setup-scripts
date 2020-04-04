@@ -1,5 +1,7 @@
 # Setup scripts for ROS environment
 
+![Build](https://github.com/agv-polsl/ros-setup-scripts/workflows/Build/badge.svg)
+
 Shell scripts for installing ROS2 Dashing on Ubuntu 18.04.4 LTS Bionic.
 Includes Gazebo installation.
 
