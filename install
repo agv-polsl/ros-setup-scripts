@@ -5,6 +5,8 @@
 
 set_colors
 
+dumen
+
 echo -e "${BLUE}This is ROS setup sript${NOCOLOR}"
 read -p "Do you wish to start the installtion? [Y/n]" -n 1 -s ans && echo
 [ "${ans}" != "n" ] || exit 0
