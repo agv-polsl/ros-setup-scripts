@@ -16,4 +16,4 @@ jobs:
     - name: configure
       run: chmod +x ./install
     - name: install
-      run: set -e && echo yyyyn | ./install
+      run: echo yyyyn | ./install
