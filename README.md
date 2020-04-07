@@ -1,8 +1,8 @@
-# Setup scripts for ROS environment
+# Setup scripts for ROS Melodic environment
 
 ![Build](https://github.com/agv-polsl/ros-setup-scripts/workflows/Build/badge.svg)
 
-Shell scripts for installing ROS2 Dashing on Ubuntu 18.04.4 LTS Bionic.
+Shell scripts for installing ROS Melodic on Ubuntu 18.04.4 LTS Bionic.
 Includes Gazebo installation.
 
 ## Setup steps
@@ -16,13 +16,6 @@ Includes Gazebo installation.
 6. Run installation `./install`.
 7. To enter desktop environment start X server `startx`.
 8. Setting up xfce theming may require re-running the script after entering gui.
-
-## Setup test
-
-After typing following commands you should see a simple robot moving.
-
-1. `gazebo --verbose /opt/ros/dashing/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world`.
-2. `ros2 topic pub /demo/cmd_demo geometry_msgs/Twist '{linear: {x: 1.0}}' -1`.
 
 ## Files in repo
 

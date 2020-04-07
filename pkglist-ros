@@ -1,4 +1,9 @@
-ros-dashing-ros-base
-ros-dashing-desktop
-ros-dashing-geometry*
-ros-dashing-rqt*
+git
+ros-melodic-desktop-full
+python-rosdep 
+python-rosinstall 
+python-rosinstall-generator 
+python-wstool 
+build-essential
+ros-melodic-ros-control 
+ros-melodic-ros-controllers
