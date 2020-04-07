@@ -1,7 +1,7 @@
+python3-pip
 git
 python-rosdep 
 python-rosinstall 
 python-rosinstall-generator 
 python-wstool 
 build-essential
-catkin_tools

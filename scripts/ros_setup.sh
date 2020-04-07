@@ -19,6 +19,8 @@ function install_ros
 
 	sudo rosdep init
 	rosdep update
+
+	sudo pip install -U catkin_tools
 }
 
 function install_gazebo
