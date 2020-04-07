@@ -1,4 +1,3 @@
-ros-dashing-ros-base
-ros-dashing-desktop
-ros-dashing-geometry*
-ros-dashing-rqt*
+ros-melodic-desktop-full
+ros-melodic-ros-control 
+ros-melodic-ros-controllers

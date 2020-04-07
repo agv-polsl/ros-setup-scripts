@@ -1,6 +1,7 @@
-curl
 git
-gnupg2
-lsb-release
-python3-argcomplete
-python3-pip
+python-rosdep 
+python-rosinstall 
+python-rosinstall-generator 
+python-wstool 
+build-essential
+catkin_tools

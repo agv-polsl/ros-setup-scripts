@@ -5,7 +5,7 @@
 
 set_colors
 
-echo -e "${BLUE}This is ROS setup sript${NOCOLOR}"
+echo -e "${BLUE}This is ROS Melodic setup sript${NOCOLOR}"
 read -p "Do you wish to start the installtion? [Y/n]" -n 1 -s ans && echo
 [ "${ans}" != "n" ] || exit 0
 
@@ -14,14 +14,14 @@ sudo apt update && sudo apt upgrade -y
 [ $? -eq 0 ] || error "Failed to update apt-get, aborting..."
 echo -e "${GREEN}System update done${NOCOLOR}"
 
-echo -e "${BLUE}Installing ROS dependencies${NOCOLOR}"
+echo -e "${BLUE}Installing ROS Melodic dependencies${NOCOLOR}"
 install_rosdeps
-[ $? -eq 0 ] || error "Failed to install ROS dependencies, aborting..."
+[ $? -eq 0 ] || error "Failed to install ROS Melodic dependencies, aborting..."
 echo -e "${GREEN}ROS dependencies installation done${NOCOLOR}"
 
-echo -e "${BLUE}Installing ROS${NOCOLOR}"
+echo -e "${BLUE}Installing ROS Melodic${NOCOLOR}"
 install_ros
-[ $? -eq 0 ] || error "Failed to install ROS, aborting..."
+[ $? -eq 0 ] || error "Failed to install ROS Melodic, aborting..."
 echo -e "${GREEN}ROS installation done${NOCOLOR}"
 
 echo -e "${BLUE}Installing pip modules${NOCOLOR}"
@@ -30,9 +30,9 @@ python3 -m pip install -r requirements.txt
 [ $? -eq 0 ] || echo "${RED}Failed install pip modules, continuing...${NOCLOR}"
 echo -e "${GREEN}Pip modules installaion done${NOCOLOR}"
 
-read -p "Do you wish to install simulator (Gazebo) [Y/n]" -n 1 -s ans && echo
-[ "${ans}" != "n" ] && install_gazebo
-echo -e "${GREEN}Gazebo installation done${NOCOLOR}"
+# read -p "Do you wish to install simulator (Gazebo) [Y/n]" -n 1 -s ans && echo
+# [ "${ans}" != "n" ] && install_gazebo
+# echo -e "${GREEN}Gazebo installation done${NOCOLOR}"
 
 read -p "Do you wish to install desktop environment (xfce4) [Y/n]" -n 1 -s ans \
 && echo
