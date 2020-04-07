@@ -1,3 +1,9 @@
+git
 ros-melodic-desktop-full
+python-rosdep 
+python-rosinstall 
+python-rosinstall-generator 
+python-wstool 
+build-essential
 ros-melodic-ros-control 
 ros-melodic-ros-controllers
